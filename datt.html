@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <script>
+        let a=10;   // number
+        let b='HHI'; // string
+        let c=true;  // boolean 
+        let d='233jsfshj';
+        let e="sham";
+        let f=`true`;
+        let g; // undefined
+        let h=null; // null
+
+        console.log(g);
+      //  alert(g)
+
+
+        let aaa=[1,2,3,4,5,6,7,8,9,10]; // array
+              //   0,1,2,3,4,5,6,7,8,9
+        let obj={
+            name: "sham",
+            age: 25,
+            ispassed: true,
+            add:{
+                city: "pune",
+                state: "MH"
+            }
+        }
+
+        let ndata=[  // array of objects
+            { 
+                name: "sham",
+                age: 25
+            },
+            { 
+                name: "ram",
+                age: 34
+            },
+            { 
+                name: "rahul",
+                age: 56
+            }
+        ]
+
+        let add=ndata[0].age + ndata[1].age + ndata[2].age;
+
+   document.getElementsByTagName('h1')[0].innerHTML=add;
+
+        //document.getElementsByTagName('h1')[0].innerHTML=aaa[8];
+       // document.getElementsByTagName('h1')[0].innerHTML=obj.age;
+        //1) primitive data types
+           // a) number
+           // b) string
+           // c) boolean
+           // d) undefined
+           // e) null
+        // 2) non-primitive data types
+           // a) object
+           // b) array
+    </script>
+</body>
+</html>
