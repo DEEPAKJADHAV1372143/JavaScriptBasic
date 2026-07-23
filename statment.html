@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script>
+	// declaration 
+     var num=20;
+     var arr=[1,2,3,4,5,6,7];  // arr[5] = 6
+
+     // postname postoffice letter address Pune
+
+     var add='Nanded';
+     var cityNames=["Pune","Nanded","Mumbai"]
+
+     switch(add){
+     case cityNames[0]:{  //pune == Nanded // string letaral
+     	// 70%  20% 0%  // Person // AI  code // improve
+     	document.write(`this is is ${cityNames[0]} <br>`);
+     	break;
+     }
+     case cityNames[1]:{   //Pune==Pune
+     	document.write(`this is is ${cityNames[1]} <br>`);
+     	break;
+     }
+     case cityNames[2]:{ //Pune==Mumbai
+     	document.write(`this is is ${cityNames[2]} <br>`);
+     	break;
+     }
+
+	  default:{    // Not found
+	  	document.write('No adddres found <br>');
+     	break;
+	  }
+     }
+
+     
+     switch(num){  //3==3  3==1 3==2 6==3 ture
+     case 10:{   // num==10
+     	document.write('this is 1 <br>');
+     	break;
+     }
+     
+     case 20:{   // num ==20
+     	document.write('this is 2  <br>');
+     	break;
+     }
+
+      case 30:{  //num===30
+     	document.write('this is 3 <br>');
+     	break;
+     }
+
+	 default:{ 
+	 	document.write('no one match <br>');
+	 	break;
+	 }
+
+     }
+     
+
+
+
+
+
+
+
+
+
+	 var age=2;
+     var isTrue=true;
+     var marks=40;
+     var ovj={ name:'sham', age:25, old:false, isPass:true}
+     // age>18  // 2>18  // false
+	// use 
+
+     if (true) {
+     	 document.write('First block <br>');
+     	if (true) {
+     		document.write('Second block <br>');
+     		if (false) {
+     			document.write('Third block <br>');
+     		}
+
+     	}
+     }
+
+	
+	if(ovj.name=="sham") {  // true flase
+       document.write("Addminstion Pume FC");
+	} else{
+		document.write('Work at home')
+	}
+
+</script>
+</body>
+</html>
