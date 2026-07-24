@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<script>
+		// for loop 
+		// 3  1. declaration 2. condition 3.increment /dec
+        // let a=0 fixed
+        // conditon cheked
+        // a++ 0, 1,2,3,4,      5,6,7
+
+		// for(let a=0; a<10; a++){ 
+        //  // document.write(a+"<br>");
+        //   document.write(`${a} <br>`);
+		// }
+
+		// while loop
+
+		var b=0;  // 1  2 3 4 5
+		 while(b<0){ // 0<0
+		 	document.write(` <b> ${b}  </b> <br>`);
+		 	b++;
+		 }
+
+		 // do   while
+		  var c=0;
+		  do{
+		  	document.write(`${c} <br>`);
+		  	c++;
+		  } while(c<0)
+
+         // for in loop
+
+		  var myDetails={
+		  	name:"Deepak",
+		  	age:25,
+		  	mark:35,
+		  	job:'Yes'
+		  }
+          //   myDetails.name  => "Deepak"
+          //   myDetails.age  => 25
+          //   myDetails.mark  => 35
+          
+		  for( let k in myDetails){
+              document.write(`${k}  => ${myDetails[k]} <br>`)
+		  }
+
+		  var arr=['a','b','c'];
+            // aar[0] = 'a'
+		  for( let i in arr){
+		  	document.write(` ${i}=> ${arr[i]} <br>`)
+		  }
+
+		  // for of
+          var arr2=['a','b','c','d'];
+          for( let v of arr2){
+          	document.write(`${v} <br>`);
+          }
+
+
+					  
+	</script>
+</body>
+</html>
