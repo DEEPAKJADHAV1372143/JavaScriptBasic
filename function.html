@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- <button onclick="fun1()"> click here </button> -->
+	<script>
+		// Function 
+		// Normaal function  this
+
+		// var aaa= ()=>{}
+
+		function fun1(){ // function decalaration
+			var a=20;
+			var b=30;
+			var c=a+b;
+			document.write(`${c} <br>`)
+		}
+
+		fun1(); // function calling
+
+		// Paramiterize Function 
+		function fun2(x,y){ //paramertir
+			var z=x+y;
+			document.write(`${z} <br>`)
+		 }
+
+		 fun2(3,5);// argument
+		 fun2(200,300)
+		 // Returen function
+
+		 function fun3(){
+		 	var m=50;
+		 	var mm=m*m;
+		 	return mm;
+		 }
+
+		 var val =fun3();
+		 document.write(`<br>This is third function ${val} <br>`);
+		 // paramitere with return
+
+		 function fun4(name,msg){
+		 	return `<br> Dear ${msg} ${name}  How are you?`
+		 }
+         
+         var v2=fun4('Sham', 'Mr');
+         document.write(v2)
+
+         var v2=fun4('Shamal', 'Miss');
+         document.write(v2)
+
+         
+
+         
+	</script>
+
+</body>
+</html>
