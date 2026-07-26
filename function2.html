@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+    // Scope
+    // Globel
+    // let const  ===== var X  globle
+    // mutability  => we can change value  //array object
+    // immutability => we can  not change value (new) //string number boolean
+
+ var ar=[10,20,30];
+     document.write(ar +'<br>');
+     document.write(ar[0] +'<br>');
+     ar[0]=88;
+     document.write(ar +'<br>');
+
+var str='Techrel'; 
+    document.write(str +'<br>'); 
+    document.write(str[2] +'<br>'); 
+    str[2]='D';  //TeDherl  not  immutability
+    document.write(str +'<br>');
+    str='Pune'
+     document.write(str +'<br>');
+
+
+    function F(){  // Closer 
+    	let d=40;
+    	document.write('I am local var'+d+"<br>");
+    	function FF(){
+    		let d=40;
+    		document.write('I am Closer var'+d+"<br>"); // Lexical scope
+    		function FFF(){
+    			let d=40;
+    			document.write('I am Closer var'+d+"<br>"); // Lexical scope
+    		}
+    		FFF();
+    	}
+    	FF();
+    }
+
+   // F();
+
+    let a=10;  // globel
+
+    function fun1(){
+    	let b=20;  // local or  functional scope
+    	document.write('I am local var '+b+' function <br>');
+    	document.write('I am globle var '+a+' function <br>');
+    	if(true){
+    		let c=30;  // block scope
+    		document.write('I am local var '+c+' block <br>');
+    		document.write('I am globle var '+a+' block <br>');
+    	}
+    	//document.write('I am local var '+c+' outer of the block <br>');
+    }
+    //document.write('I am local var '+b+' outer <br>');
+    //document.write('I am globle var '+a+' outer <br>');
+
+   // fun1()
+
+
+
+
+
+
+
+
+
+	
+	function greeting(a='Ram'){  // Defoult prammeter
+     document.write('Hi '+a+" <br>");
+	}
+    //greeting();
+    //greeting('Sham');
+    
+</script>
+</body>
+</html>
