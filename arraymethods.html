@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	// Arrray Methods
+	 var arr=[10,20,30,40,50]; // value
+	// index    0, 1, 2,  3 ; index
+	document.write(`${arr} <br>`); 
+	console.log(arr)
+	let l = arr.length;
+	document.write(l + '<br>');
+	arr.push(90,102,22);
+	document.write(`${arr} <br>`); 
+	console.log(arr);
+
+	arr.pop();   arr.pop();
+	document.write(`${arr} <br>`); 
+	console.log(arr);
+
+	arr.unshift(2,4,8);
+	document.write(`${arr} <br>`); 
+	console.log(arr);
+
+	arr.shift(); arr.shift(); arr.shift();
+	document.write(`${arr} <br>`); 
+	console.log(arr);
+
+	//arr.splice(index,delete,add);
+    arr.splice(2,0,333,444);
+    document.write(`${arr} <br>`); 
+	console.log(arr);
+
+var arr2=['a','b','c','b','c'];
+var arr3=['x','y','z'];
+    document.write(`${arr2} <br>`); 
+	console.log(arr2);
+
+var na=arr2.concat(arr ,arr3);
+	document.write(`${na} <br>`); 
+	console.log(na);
+var y=arr2.includes('j');
+	document.write(`${y} <br>`); 
+	console.log(y);
+
+    document.write(`${arr3} <br>`); 
+	console.log(arr3);
+	arr3.reverse();
+	document.write(`${arr3} <br>`); 
+	console.log(arr3);
+
+var ax=arr2.indexOf('c');
+    document.write(`${ax} <br>`); 
+	console.log(ax);
+
+var lp=arr2.lastIndexOf('c');
+    document.write(`${lp} <br>`); 
+	console.log(lp);
+
+var arr4=[100,200,300,400];
+    arr4.push(500,600);
+        // 0   1   2  3
+    document.write(`${arr4} <br>`); 
+	console.log(arr4);  
+
+var iff=arr4.at(4);
+    document.write(`${iff} <br>`); 
+	console.log(iff);	
+    // ........
+    
+</script>
+</body>
+</html>
