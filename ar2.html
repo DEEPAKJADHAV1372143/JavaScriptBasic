@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script>
+
+// map
+// reuce
+
+	// arr.filter( (i)=>{   //jfhdsf//  })
+
+	//new arr
+
+
+
+	//  Array Methods // arr.push()
+	var arr=[40,5,3,2];
+	         0
+
+	//var total=84;
+
+	var total=arr.reduce((i,add)=> i+add);
+    document.write(total)
+
+   /// i=5    48+2
+   ///  add=50 return
+	//var m=[120,15,9,6];
+
+	// var m=arr.map( (i,a)=> i*3);
+
+	// document.write(m);
+	// console.log(m)
+
+    
+    // var t=arr.reduce((i,t)=> i+t);
+    // document.write(t +"<br>")
+ 
+	// var mymarks=[5,20,0,62,10];
+
+	// var y=mymarks.some((i,a)=> i>35);
+	// document.write(y +'<br>')
+
+
+
+	// var y_n=mymarks.every((m,a)=> m>35);
+	// document.write(y_n +"<br>")
+
+
+
+	// document.write(arr+'<br>');
+
+	// var o=arr.sort((a,b)=> b-a);
+	// document.write(o+'<br>');
+
+
+	//var arr=[6,7,8,9,10,11];
+    // var m= arr.map((x)=>x+5);
+
+   var m=arr.map((w)=>{ 
+   		return w+10;
+   })
+
+ // document.write(m+"<br>");
+ // console.log(m)
+
+	//arr.forEach( function (x){ document.write(x+'<br>')});
+	//arr.forEach(  (x)=>{ document.write(x*x +'<br>')} );
+
+	// arr.forEach((x)=>{ document.write(x +'<br>')})
+	// var y={name:'Sham', age:23, add:'Pune'};  
+	// y.name
+	var arr2=[
+		{name:'Sham', age:23, add:'Pune', mark:[29,39,594,39]},
+		{name:'Ram', age:34, add:'Mumbai' ,mark:[29,39,594,39]},
+		{name:'Ghansham', age:12, add:'Nanded', mark:[29,39,594,39]}
+	];
+
+   var na=arr2.filter((x)=>x.age<18);
+   // document.write(na +'<br>');
+   // console.log(na)
+
+	// arr2.forEach((y)=>{ 
+	// document.write(`My name is ${y.name} . I am ${y.age} year old. I am form ${y.add} <br>`) 
+	// })
+
+</script>
+</body>
+</html>
