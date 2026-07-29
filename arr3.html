@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>    //0,1,2, 3, 4, 5, 6,7,8                    
+	var arr=[ 2,3,4,50,60,70,4,8,9];//
+
+	console.log(arr)
+	// find
+    var f=arr.find((x)=> x>10); // 2>10, 3>10, 40>10
+    document.write(f +'<br>')
+
+    var ff=arr.findLast((x)=> x>10); // 9>10, 8>10, 4>10, 70>10
+    document.write(ff+'<br>')
+
+    var i=arr.findIndex((x)=> x>10);
+    document.write(i+'<br>');
+    //arr.splice(i,1,33);
+    //arr.splice(index,delete,add)
+
+    var ii=arr.findLastIndex((x)=> x>10);
+    document.write(ii+"<br>");
+    document.write(arr+"<br>");
+    //delete arr[ii];
+    //arr.splice(ii,2);
+    document.write(arr+"<br>");
+    console.log(arr)
+
+    var arr2=[1,[2,[3]],4];
+    console.log(arr2)
+    document.write(arr2 +'<br>');
+    let ss=arr2.flat(2)
+
+     console.log(ss)
+    document.write(ss +'<br>');
+    // let m=arr2.fill('S');
+    // document.write(m +'<br>');
+    
+var ar=[2,3,4,50,60,70,4,8,9];//
+var s=ar.join('/')
+   document.write(s+'<br>');
+   console.log(s)
+   document.write( typeof s+'<br>')//
+
+   //40
+   document.write(ar.keys()); //index
+   document.write(ar.values()); // values
+   document.write(ar.entries()); // both index and value
+   // [
+   // 	[0,2],
+   // 	[1,3],
+   // 	[2,4],
+   // 	[3,50],
+   // 	...
+   // 	...
+   // 	...
+   // ]
+
+ for( let k of ar.keys()){
+ 	 document.write(k +'<br>');
+ }
+   
+
+ for( let v of ar.values()){
+ 	 document.write(v+'<br>');
+ }
+   
+
+   for( let e of ar.entries()){
+ 	 document.write(e+'<br>');
+ }
+
+    // Array Methods  3 day 
+
+
+
+
+</script>
+</body>
+</html>
