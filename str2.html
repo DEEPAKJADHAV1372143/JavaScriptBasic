@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	var str='Sham';   // AC:********234  // opt mo:******48
+	var n=str.padEnd(10,'*');
+	//'Sham******'
+	document.write(n+'<br>');
+
+	var nn=str.padStart(11,'#');
+	//'******Sham'
+	document.write(nn+'<br>');
+
+	var mob='9876543210';
+	      //0 123456789
+	var s=mob.slice(6,10);
+	document.write(s.padStart(10,'*')+'<br>');
+    
+    var ss=mob.substr(6,2);
+	document.write(ss+'<br>');
+
+	var str2="Hi Arjun Aryan An the Anm ";//   \d // match vs matchAll
+	document.write(str2.search("klksd") +"<br>");
+	document.write(str2.matchAll(/A/g) +"<br>")
+    console.log(str2.matchAll(/A/g))
+
+    var nnn=str2.matchAll(/An/g); /// /g Goloble /i casesencituve
+    // ['A','A','A','A']
+    for( let c of nnn){
+    	document.write(c+'<br>')
+    }
+
+
+   var str2="Hi Arjun Aryan An the Anm ";// 
+   var nw=str2.matchAll();
+   //        / regular ex /
+   
+
+   array
+   string
+   obj
+
+</script>
+</body>
+</html>
