@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // string.split() string.join()
+        var str="Hi Arjun Aryan An the Anm";
+        var arr=str.split(" ");
+        console.log(arr);
+        var str2=arr.join("-");
+        console.log(str2);
+        
+        // object methods
+        var obj={
+            name:'Arjun',
+            age:22,
+            city:'Pune',
+            display:function(){
+                return this.name+" "+this.age+" "+this.city;
+            }
+        }
+        console.log(obj.display());
+        // keyes() values() entries()
+        var keys=Object.keys(obj);  
+        var values=Object.values(obj);
+        var entries=Object.entries(obj);
+        console.log(keys);
+        console.log(values);
+        console.log(entries);
+        // hasOwnProperty()
+        console.log(obj.hasOwnProperty('name'));
+        console.log(obj.hasOwnProperty('country'));
+        // Object.assign()
+        var obj2={
+            country:'India',
+            state:'Maharashtra'
+        }
+        var obj3=Object.assign(obj,obj2);
+        console.log(obj3);
+        // Object.freeze()  Object.seal()
+        var obj4={
+            name:'Aryan',
+            age:20
+        }
+        Object.freeze(obj4);
+        obj4.name='Anm';
+        console.log(obj4.name); // Aryan
+        var obj5={
+            name:'Anm',
+            age:18
+        }
+        Object.seal(obj5);
+        obj5.name='Anm';
+        console.log(obj5.name); // Anm
+        obj5.age=19;
+        console.log(obj5.age); // 19
+        
+        // we will check some  new things in JAVASCRIPT , Tommorow.
+
+        
+    </script>
+</body>
+</html>
