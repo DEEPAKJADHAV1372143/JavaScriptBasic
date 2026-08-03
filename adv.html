@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script>
+	// rest spread opratore 
+	// collect , uncollect
+	// pack, unpack
+
+	function abcd(...a){ //rest of the element collect 
+		console.log(a)
+	}
+    //	[10,20,40,300,400,700]   // daily spend
+	//  [10,200,30]
+	//  [10,29,30,40,59,697,79,5967,68]
+
+	function dailaySpend(...spend){
+
+	}
+
+	function login(username,userpass){
+
+	}
+
+	abcd('Sham','Ram','ghansham','radha');
+
+	var a=['Mango','apple','papaya'];
+	var b=['Monkey','pecock','tiger'];
+	var c=[a,b];
+	console.log(c);
+	var d=[...a,...b];// spread 
+	console.log(d);
+
+	var ar=[1,2,3,4,5,6,7,8,9,10,11]; //kam work 
+	var [a,b, ...c]=ar; /// first a , second b, reamin rest c,
+	console.log(a)
+	console.log(b)
+	console.log(c)
+
+	var o1={username:'sham'};
+	var o2={userpassword:'@123'};
+
+	var o3={o1,o2}
+	console.log(o3)
+
+	var o4={...o1,...o2}
+	console.log(o4)
+	   // { {},{}}
+	   //{ username:'sham' , userpassword:'@123'}
+
+
+	var username=null; // nullish, undefine  handel 
+	var isuser=username ?? 'No value';
+	console.log(isuser)
+
+
+	var firendMony;
+
+	var isMonyBack= firendMony ?? '0'
+
+    console.log(isMonyBack)
+
+    var radha;
+
+    var goTOmarket=radha ?? 'Geeta';
+
+    console.log(goTOmarket)
+
+
+
+//UI
+
+    #rest
+    #spread 
+    program 
+    deffine
+    1)HTML (12) 10
+    2)CSS  (20)  17
+    3)JS (30-40)
+    4)bootsrap (10) 
+    
+    5) Angular vs React
+// DS
+   core java
+   adv java
+   DATABASE (sql)
+   boot 
+   mevan
+   AWS
+   10 ? 4.5
+   //6 3-4
+   ... AI ..cloude 
+   ...eng  ..
+   ... apply ..
+
+
+
+
+</script>
+</body>
+</html>
