@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1 class="xyz">Title</h1>
+	<p id="abc">info</p>
+	<h2 name='title'>Sub info</h2>
+	<div>
+		<b>I am bold</b>
+	</div>
+    
+	<script>
+      // var obj={name:'sham' ,age:23}   div b{}
+      // document.write(obj)
+      var obj={name:"My_Name"}
+	var b=document.querySelector('div b');
+	    //b.innerText='My information has been changed'	
+	    b.innerText=obj.name;
+
+	var h2=document.getElementsByName('title')[0];  // access
+	    h2.innerText="Changed info"	
+
+	 var h1=document.getElementsByClassName('xyz')[0]; // access
+	     h1.innerText="This is a title"
+
+
+     var p=document.getElementById('abc'); //access
+         p.innerText="The JAVASCRIPT";
+         p.style.color="green";
+         p.style.border="2px solid red"
+
+
+		//DOM
+	// var h=document.getElementsByTagName('h1')[0]; // access
+	//     h.innerText="My new Text";  // information pass
+	//     h.style.color='red'; // css pass
+	//     h.style.backgroundColor='blue';
+	//     h.innerText="ArjunDeep"	;
+	// var p=document.getElementsByTagName('p')[0];
+	//     p.innerText='This is a paregraph';
+	//     p.style.color='blue';
+	//     p.style.fontSize='40px';
+	</script>
+
+</body>
+</html>
