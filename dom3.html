@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		body{
+			padding: 0px;
+			margin: 0px;
+		}
+	</style>
+
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+<ul></ul>
+<section></section>
+<section id="footer">
+</section>
+
+<script>
+	var menu=['Home','About','Service','login','Contact'];
+	// data required
+	var ul=document.querySelector('ul');
+	    ul.style.backgroundColor='black';
+	    ul.style.padding='7px 20px'
+	menu.forEach((x)=>{
+		var li=document.createElement('li');
+		    li.innerText=x;
+		    li.style.color='white';
+		    li.style.display='inline';
+		    li.style.padding='7px 20px'
+		    ul.appendChild(li);
+	})
+  
+  var details=[
+  	{
+  		name:'ArjunDeep',
+  		email:'a@gmail.com',
+  		pos:'Developer',
+  		sallary:'5LPA'
+  	},
+  	{
+  		name:'Sham',
+  		email:'s@gmail.com',
+  		pos:'Manager',
+  		sallary:'25LPA'
+  	},
+  	{
+  		name:'Seeta',
+  		email:'se@gmail.com',
+  		pos:'HR',
+  		sallary:'10LPA'
+  	},
+  	
+  	{
+  		name:'Shailash',
+  		email:'sha@gmail.com',
+  		pos:'Jr. developer',
+  		sallary:'3LPA'
+  	},
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	}
+  	,
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	},
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	},
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	},
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	},
+  	{
+  		name:'Amol',
+  		email:'a@gmail.com',
+  		pos:'.Net Developer',
+  		sallary:'15LPA'
+  	}
+
+  ]
+
+
+var section=document.querySelector('section');
+    // section.style.display='flex';
+    section.classList.add('row')
+    section.classList.add('m-5')
+  details.forEach((x)=>{
+  	    var div=document.createElement('div');
+		var p=document.createElement('p');
+		    p.innerText='Name: '+x.name;
+		    div.appendChild(p);
+
+		var p2=document.createElement('p');
+		    p2.innerText='Email: '+x.email;
+		    div.appendChild(p2);
+
+		var p3=document.createElement('p');
+		    p3.innerText='Posistion: '+x.pos;
+		    div.appendChild(p3);
+
+		var p4=document.createElement('p');
+		    p4.innerText='Sallary: '+x.sallary;
+		    div.appendChild(p4);
+
+		  // div.style.flex='1';
+		  // div.style.border='1px solid black';
+		  // div.style.padding='10px';
+		  // div.style.margin='20px'
+
+
+         div.classList.add('col-md-3')
+         div.classList.add('p-4')
+         div.classList.add('border')
+		 section.appendChild(div); 
+
+	})
+
+
+
+ var footerInfo=[
+ 	'Created By ArjunDeep',
+ 	`Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et `,
+	'ABCD.com'
+ ]
+	
+
+	var foot=document.querySelector('#footer');
+	    foot.classList.add('text-center');
+	    foot.classList.add('bg-dark');
+	    foot.classList.add('p-5');
+	    foot.classList.add('text-white');
+	    
+
+	footerInfo.forEach((x)=>{
+		var p=document.createElement('p');
+		    p.innerText=x;
+		    foot.appendChild(p);
+	})
+
+</script>
+</body>
+</html>
