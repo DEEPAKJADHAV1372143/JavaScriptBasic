@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+	var loginForm=[
+		{
+			lable:'Enter User Name',
+			element:'input',
+			data:'UserName',
+			type:'text'
+		},
+		{
+			lable:'Enter User Email',
+			element:'input',
+			data:'UserEmail',
+			type:'email'
+		},
+		{
+			lable:'Enter User Date of Birth',
+			element:'input',
+			data:'UserEmail',
+			type:'date'
+		},
+		{
+			lable:'Enter User Birth of Place',
+			element:'input',
+			data:'UserEmail',
+			type:'input'
+		},
+		{
+			lable:'Set User Password',
+			element:'input',
+			data:'UserPassword',
+			type:'input'
+		},
+		{
+			lable:'Confirm User Password',
+			element:'input',
+			data:'UserPassword',
+			type:'input'
+		},
+		{
+			lable:'Submit',
+			element:'button',
+			data:'',
+			type:'submit'
+		},
+		{
+			lable:'Cancel',
+			element:'button',
+			data:'',
+			type:'reset'
+		},
+	]
+
+	var be_titleName="Registration Form for Techrel";
+
+	var form=document.createElement('form');
+	    form.style.border='1px solid gray';
+	    form.style.borderRadius='10px';
+	    form.style.margin='10px';
+	    form.style.padding='10px';
+	    
+	         document.body.appendChild(form);
+   var h1=document.createElement('h3');
+       h1.innerText=be_titleName;
+       form.appendChild(h1)
+
+	      loginForm.forEach((x)=>{
+
+	      	if(x.element=='button'){  /// agg==18
+	      	var input=document.createElement('input');
+	      	    input.type=x.type; 
+	      	    input.style.margin='5px 0px';
+	      	     form.appendChild(input);
+
+	      	}else{
+	      	var div=document.createElement('div');
+	      	var label=document.createElement('label');
+	      	    label.innerText=x.lable;
+	      	var input=document.createElement('input');
+	      	    input.type=x.type;
+	      	    input.name=x.data;
+	      	     input.style.margin='5px 0px';
+	      	var br=document.createElement('br')
+	      	    div.appendChild(label);
+	      	    div.appendChild(br);
+	      	    div.appendChild(input); 
+	      	    form.appendChild(div)
+	      	}
+	      	
+
+	      })
+</script>
+
+<!-- HTML=>tag  attributs
+css=> Property value
+bootstrap => all used dynamic
+Javascript => all programming  -->
+</body>
+</html>
