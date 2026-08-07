@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<input type="" name=""><br>
+<span></span><br>
+<button>Submit Data</button>
+
+
+<!-- <button onclick="g()">GET  INFO</button>
+<button onclick="s()">SET  INFO</button>
+<button onclick="r()">Remove  INFO</button> -->
+<script>
+
+
+
+    
+    function r(){
+    	document.getElementsByTagName('input')[0].value=''
+    }
+
+
+    function s(){
+    	document.getElementsByTagName('input')[0].value=90;
+    }
+
+
+	
+	function g(){
+		var i=document.getElementsByTagName('input')[0].value;
+		if(i>70){
+			 alert("Free Tikits")
+		}else{
+			alert('You have to pay 100 Rs')
+		}
+		
+	}
+</script>
+
+</body>
+</html>
