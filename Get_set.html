@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		#aa{background: red;}
+	</style>
+</head>
+<body>
+
+<h1 align="center" class="abcd">Information </h1>
+<button onclick="aa()">click set id</button>
+<button onclick="rr()">remove attribute</button>
+<button onclick="gg()">Get information att</button>
+ <br><br>
+
+ <input type="password" name="" value="12345">
+ <button onclick="ckpass()" >show/hide</button>
+
+<script>
+
+	function ckpass(){
+		var inp=document.querySelector('input'); //access tag avilabel in dom
+		var isvalue=inp.getAttribute('type'); // get attribut value
+
+		if(isvalue=='password'){   /// check 
+           inp.setAttribute('type','text');   /// set text
+		}else{
+		   inp.setAttribute('type','password');  /// sety password
+		}
+
+	}
+   ///  newv 
+	 function gg(){
+		var h=document.querySelector('h1');
+		var newv=h.getAttribute('class');
+
+		//var newv=h.hasAttribute('class');
+		alert( ' it have this:' +newv)
+		    // attribut name
+	}
+    
+    function rr(){
+		var h=document.querySelector('h1');
+		    h.removeAttribute('align');
+		    // attribut name
+	}
+
+	function aa(){
+		var h=document.querySelector('h1');
+		    h.setAttribute('id','aa');
+		    // attribut=vlaue
+	}
+</script>
+</body>
+</html>
