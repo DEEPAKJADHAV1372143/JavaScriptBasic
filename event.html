@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="text" name="name">
+	<button>click</button>
+
+	<select>
+		<option>a</option>
+		<option>b</option>
+		<option>c</option>
+		<option>d</option>
+	</select>
+
+<script>
+
+	// array function splice , push ,
+	// create tag
+	// fucntion
+
+	// CRUD
+
+     //document.body.addEventListener('load',()=>{ alert('boady load')})
+
+
+	console.log(window)
+	window.onload =()=>{
+		alert('loading')
+	}
+
+	function abc(){
+		alert('Hi the number is grater than 20  ex 20+')
+	}
+
+	function mno(){
+		alert('I am second function less than 20 ex 1 to 19')
+	}
+
+    var btn=document.querySelector('button');
+    console.log('there is button')
+    console.log(btn)
+    
+    var input=document.querySelector('input');
+
+console.log('there is input')
+    console.log(input)
+    function addrmove(){
+
+	     if(input.value>20){
+	     	    btn.removeEventListener('click',mno)
+	     		btn.addEventListener('click',abc);
+	     }else{
+	     	    btn.removeEventListener('click',abc)
+	            btn.addEventListener('click',mno);
+	     }
+
+    }
+    input.addEventListener('mouseleave',addrmove);
+
+
+	
+	    
+
+	   // btn.removeEventListener('click',abc)
+</script>
+
+</body>
+</html>
