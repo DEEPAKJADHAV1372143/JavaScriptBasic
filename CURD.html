@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style>
+		input{
+			margin: 7px; padding: 7px;
+		}
+		button{
+			margin: 7px; padding: 7px 21px;
+		}
+		td,th{
+			padding: 7px;
+			border-collapse: collapse;
+		}
+	</style>
+</head>
+<body>
+	<!-- To get ingortmation  -->
+<h1>User Details Form</h1>
+<input type="text" name="name" id="name" placeholder="Enter User Name"> <br>
+<input type="email" name="email" id="email" placeholder="Enter User Email"> <br>
+<input type="number" name="number" id="number" placeholder="Enter User number"> <br>
+<button onclick="addInfo()">Submit Details</button>
+
+ <!-- To show the information -->
+<!--  C = Create
+ R = Read /show
+ U = Update
+ D = Delete -->
+ <table width="100%" border="1">
+ 	<thead>
+ 		<tr>
+ 			<th>NAME</th>
+ 			<th>EMAIL</th>
+ 			<th>NUMBER</th>
+ 			<th>ACTION</th>
+ 		</tr>
+ 	</thead>
+ 	<tbody>
+
+ 	</tbody>
+ </table>
+
+ <script>
+ 	var StoreInfo=[];
+
+ 	function addInfo(){
+ 		var name=document.querySelector('#name').value;
+ 		var email=document.querySelector('#email').value;
+ 		var number=document.querySelector('#number').value;
+
+ 		if( name ==='' || email==="" || number===''){
+ 			alert("Enter user detials, All field are neccssory!");
+ 			return;
+ 		}
+
+ 		var obj={ 
+ 			name:name,
+ 			email:email,
+ 			number:number
+ 		}
+
+ 		StoreInfo.push(obj);
+ 		console.log(StoreInfo);
+
+ 		showData();
+ 		document.querySelector('#name').value='';
+ 		document.querySelector('#email').value='';
+ 		document.querySelector('#number').value='';
+ 		
+ 	}
+
+
+ 	function showData(){
+ 		var tbody=document.querySelector('tbody');
+ 	        tbody.innerHTML='';
+
+ 	    StoreInfo.forEach((x,index)=>{
+ 	    	tbody.innerHTML+=`
+		 	    <tr>
+		 			<td>${x.name}</td>
+		 			<td>${x.email}</td>
+		 			<td>${x.number}</td>
+		 			<td>
+		 				<button onclick='updateRecord(${index})'>EDIT</button>
+		 				<button onclick='deltedRecord(${index})'>DELETE</button>
+		 			</td>
+		 		</tr>
+ 	    	`;
+ 	    })    
+ 	        	   
+ 	}
+
+
+ 	function deltedRecord(index){
+ 		StoreInfo.splice(index,1);
+ 		showData();
+ 	}
+
+
+ 	function updateRecord(index){
+ 		var newName=prompt('Enter UserName',StoreInfo[index].name);
+ 		var newEemail=prompt('Enter UserEmail',StoreInfo[index].email);
+ 		var newNumber=prompt('Enter UserNumber',StoreInfo[index].number);
+ 		if(newName !==null && newEemail!==null && newNumber!==null){
+ 			StoreInfo[index].name=newName;
+ 			StoreInfo[index].email=newEemail;
+ 			StoreInfo[index].number=newNumber;
+ 		}
+
+ 		showData();
+ 	}
+ </script>
+</body>
+</html>
