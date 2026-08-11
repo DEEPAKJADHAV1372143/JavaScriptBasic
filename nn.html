@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<!-- <button>innerText</button>
+	innerText -->
+	<!-- peir -->
+	<!-- <input style="color:red; background: bleu;" type="" name="" value="" pattern="" placeholder="">
+	<img src="" width="" height="" alt=""> -->
+	<!-- "" -->
+
+
+
+<script>
+
+     var h1=document.createElement('h1');
+         h1.innerText='User Details Form';
+         document.body.appendChild(h1);
+    var input1=document.createElement('input');
+        input1.placeholder="Enter User Name";
+        input1.type='text';
+        input1.style.padding='7px';
+        input1.style.margin='7px';
+        document.body.appendChild(input1)
+
+    var br=document.createElement('br');
+        document.body.appendChild(br)
+
+    var input2=document.createElement('input');
+        input2.placeholder="Enter User Email";
+        input2.type='email';
+        input2.style.padding='7px';
+        input2.style.margin='7px';
+        document.body.appendChild(input2)
+
+    var br=document.createElement('br');
+        document.body.appendChild(br)
+    
+    var input3=document.createElement('input');
+        input3.placeholder="Enter User Number";
+        input3.type='number';
+        input3.style.padding='7px';
+        input3.style.margin='7px';
+        document.body.appendChild(input3)
+
+    var br=document.createElement('br');
+        document.body.appendChild(br)
+
+
+    var input4=document.createElement('input');
+        input4.placeholder="Enter User Password";
+        input4.type='password';
+        input4.style.padding='7px';
+        input4.style.margin='7px';
+        document.body.appendChild(input4)
+
+    var br=document.createElement('br');
+        document.body.appendChild(br)
+
+
+     var btn=document.createElement('button');
+         btn.innerText='Submit Details';
+         btn.style.margin='7px';
+         btn.style.padding='7px 21px'
+         document.body.appendChild(btn);
+
+    var br=document.createElement('br');
+        document.body.appendChild(br)
+
+
+    var table=document.createElement('table');
+        table.width="100%";
+        table.border='1'
+    var thead=document.createElement('thead')
+    var tbody=document.createElement('tbody');
+    var tr=document.createElement('tr');
+
+    var th=document.createElement('th');
+        th.innerText='NAME';
+        th.style.padding="7px"
+
+    var th2=document.createElement('th');
+        th2.innerText='EMAIL'
+        th2.style.padding="7px"
+
+    var th3=document.createElement('th');
+        th3.innerText='NUMBER'
+        th3.style.padding="7px"
+
+    var th4=document.createElement('th');
+        th4.innerText='ACTION'
+        th4.style.padding="7px"
+
+        tr.appendChild(th)
+        tr.appendChild(th2)
+        tr.appendChild(th3)
+        tr.appendChild(th4)
+        
+        thead.appendChild(tr)
+        table.appendChild(thead)
+
+        table.appendChild(tbody)
+        document.body.appendChild(table)
+
+    
+	//  1) Element / tag Selection
+	//  2) How to pass data
+	//  3) get set remove Attribut
+	//  4) css assign
+	//  5) Dynamic tag creation
+	//  6) Event pass form JS
+
+
+
+</script>
+</body>
+</html>

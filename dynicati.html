@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script>
+var mytag=[		
+	{tag:'input', type:"button", placeholder:"I am Button" },
+	{tag:'input', type:"checkbox", placeholder:"Enter .."},
+	{tag:'input', type:"color", placeholder:"Enter .."},
+	{tag:'input', type:"date", placeholder:"Enter .."},
+	{tag:'input', type:"datetime-local", placeholder:"Enter .."},
+	{tag:'input', type:"email", placeholder:"Enter Email"},
+	{tag:'input', type:"file", placeholder:"Enter .."},
+	{tag:'input', type:"hidden", placeholder:"Enter .."},
+	{tag:'input', type:"image", placeholder:"Enter .."},
+	{tag:'input', type:"month", placeholder:"Enter .."},
+	{tag:'input', type:"number", placeholder:"Enter Number"},
+	{tag:'input', type:"password", placeholder:"Enter Password"},
+	{tag:'input', type:"radio", placeholder:"Enter .."},
+	{tag:'input', type:"range", placeholder:"Enter .."},
+	{tag:'input', type:"reset", placeholder:"Enter .."},
+	{tag:'input', type:"search", placeholder:"Enter .."},
+	{tag:'input', type:"submit", placeholder:"Enter .."},
+	{tag:'input', type:"tel", placeholder:"Enter Tel"},
+	{tag:'input', type:"text", placeholder:"Enter USer Name"},
+	{tag:'input', type:"time", placeholder:"Enter .."},
+	{tag:'input', type:"url", placeholder:"Enter .."},
+	{tag:'input', type:"week"}
+]
+
+mytag.forEach((x)=>{
+
+    if(x.type=='button'){
+    	  var t=document.createElement(x.tag);
+	    t.type=x.type;
+	    t.value=x.placeholder; ////
+	    t.style.padding='7px';
+	    t.style.margin='7px'
+	    document.body.appendChild(t);
+
+	var br=document.createElement('br')
+	    document.body.appendChild(br);
+    } else{
+	var t=document.createElement(x.tag);
+	    t.type=x.type;
+	    t.placeholder=x.placeholder; ////
+	    t.style.padding='7px';
+	    t.style.margin='7px'
+	    document.body.appendChild(t);
+
+	var br=document.createElement('br')
+	    document.body.appendChild(br);
+	}
+
+})
+	</script>
+
+</body>
+</html>
