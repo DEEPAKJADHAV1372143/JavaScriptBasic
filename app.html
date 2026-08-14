@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<script>
+ var url='https://jsonplaceholder.typicode.com/todos'
+
+  fetch(url).then((res)=>{
+  	  return res.json();
+  }).then((d)=>{
+  	console.log(d)
+  	//document.write(d)
+    
+    d.forEach((x)=>{
+    	if(x.completed==true){
+    		document.write(`<p>${x.id} ) <mark> ${x.completed}</mark> ${x.title}</p>`)
+    	}
+    	
+    	/// <p> 1 ) abcd the </p>
+    })
+
+  })
+
+  .catch((e)=>{
+     console.log(e)
+  })
+
+
+
+
+
+
+	// it is a defination / creation / str
+	 var abc= new Promise((res,rej)=>{
+	 	var isTrue=false;
+	 	if(isTrue){
+            res("I am success")
+	 	}else{
+            rej("Faild")
+	 	}
+	 })
+    // calling part
+	 abc.then((r)=>{
+        console.log(r)
+	 }).catch((er)=>{
+        console.log(er)
+	 })
+  
+
+
+</script>
+</body>
+</html>

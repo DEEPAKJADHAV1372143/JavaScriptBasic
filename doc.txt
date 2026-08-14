@@ -1,0 +1,578 @@
+
+
+1. Element Selecting
+document.getElementById("title");           // By ID
+document.getElementsByClassName("item");    // By class
+document.getElementsByTagName("p");         // By tag
+document.getElementsByName("username");     // By name
+document.querySelector(".item");            // First match
+document.querySelectorAll(".item");         // All matches
+document.elementFromPoint(50, 100);         // Element at x,y
+document.getRootNode();                     // Root node (document)
+
+
+2. Element Modifying
+element.textContent = "Hello";              // Set text
+element.innerText = "Visible text";         // Set visible text
+element.innerHTML = "<b>Bold</b>";          // Set HTML
+element.outerHTML = "<div>New</div>";       // Replace element
+element.setAttribute("id","newId");         // Set attribute
+element.getAttribute("id");                 // Get attribute
+element.removeAttribute("id");              // Remove attribute
+element.hasAttribute("id");                 // Check attribute
+element.insertAdjacentHTML("beforeend","<p>Hi</p>");
+element.insertAdjacentText("afterbegin","Hi");
+element.insertAdjacentElement("beforebegin", newDiv);
+
+
+3. Class Manipulation
+element.classList.add("active");
+element.classList.remove("active");
+element.classList.toggle("hidden");
+element.classList.replace("old","new");
+element.classList.contains("active");
+element.className = "btn primary";          // Direct string
+
+
+
+4. Node Manipulation
+document.createElement("div");
+document.createTextNode("Hello");
+document.createComment("Note");
+element.appendChild(newDiv);
+element.append("Hi");
+element.prepend("Start");
+element.before("Before");
+element.after("After");
+element.replaceWith(newDiv);
+element.remove();
+element.cloneNode(true);
+parent.insertBefore(newDiv, child);
+parent.replaceChild(newDiv, oldChild);
+parent.removeChild(child);
+
+
+
+5. Event Methods
+element.addEventListener("click", ()=>alert("Clicked"));
+element.removeEventListener("click", handler);
+element.dispatchEvent(new Event("custom"));
+event.preventDefault();
+event.stopPropagation();
+event.stopImmediatePropagation();
+
+
+6. Style Manipulation
+element.style.color = "red";
+element.style.setProperty("background","yellow");
+element.style.getPropertyValue("color");
+element.style.removeProperty("color");
+getComputedStyle(element).fontSize;
+
+
+7. DOM Traversal
+element.parentNode;
+element.parentElement;
+element.children;
+element.childNodes;
+element.firstChild;
+element.firstElementChild;
+element.lastChild;
+element.lastElementChild;
+element.previousSibling;
+element.previousElementSibling;
+element.nextSibling;
+element.nextElementSibling;
+element.closest(".container");
+element.querySelector("span");
+element.querySelectorAll("li");
+
+
+
+let str = "  Hello JavaScript World!  ";
+// 1. Length
+console.log(str.length); // 26
+
+// 2. charAt, charCodeAt, codePointAt
+console.log(str.charAt(2));       // 'H'
+console.log(str.charCodeAt(2));   // 72
+console.log(str.codePointAt(2));  // 72
+
+// 3. at (ES2022)
+console.log(str.at(-1)); // '!'
+
+// 4. slice, substring, substr
+console.log(str.slice(2, 7));     // 'Hello'
+console.log(str.substring(2, 7)); // 'Hello'
+console.log(str.substr(2, 5));    // 'Hello'
+
+// 5. concat
+console.log("Hello".concat(" ", "World")); // 'Hello World'
+
+// 6. toUpperCase, toLowerCase
+console.log(str.toUpperCase()); // '  HELLO JAVASCRIPT WORLD!  '
+console.log(str.toLowerCase()); // '  hello javascript world!  '
+
+// 7. trim, trimStart, trimEnd
+console.log(str.trim());      // 'Hello JavaScript World!'
+console.log(str.trimStart()); // 'Hello JavaScript World!  '
+console.log(str.trimEnd());   // '  Hello JavaScript World!'
+
+let str = "  Hello JavaScript World!  ";
+// 8. padStart, padEnd
+console.log("5".padStart(3, "0")); // '005'
+console.log("5".padEnd(3, "0"));   // '500'
+
+// 9. repeat
+console.log("Hi ".repeat(3)); // 'Hi Hi Hi '
+
+// 10. replace, replaceAll
+console.log(str.replace("World", "Universe")); // '  Hello JavaScript Universe!  '
+console.log("foo foo".replaceAll("foo", "bar")); // 'bar bar'
+
+// 11. split
+console.log(str.trim().split(" ")); // ['Hello','JavaScript','World!']
+
+// 12. indexOf, lastIndexOf
+console.log(str.indexOf("JavaScript"));     // 8
+console.log(str.lastIndexOf("o"));          // 22
+
+// 13. includes, startsWith, endsWith
+console.log(str.includes("World"));         // true
+console.log(str.trim().startsWith("Hello")); // true
+console.log(str.trim().endsWith("!"));       // true
+
+let str = "  Hello JavaScript World!  ";
+// 14. match, matchAll, search
+console.log(str.match(/JavaScript/));       // ['JavaScript']
+for (let m of str.matchAll(/o/g)) console.log(m[0]); // 'o' 'o'
+console.log(str.search(/World/));           // 19
+
+// 15. localeCompare
+console.log("apple".localeCompare("banana")); // -1
+
+// 16. normalize
+console.log("\u00F1".normalize("NFD")); // 'n' + '~'
+
+// 17. isWellFormed, toWellFormed (ES2024)
+console.log("abc".isWellFormed()); // true
+console.log("abc".toWellFormed()); // 'abc'
+
+
+let arr = ["Banana", "Orange", "Apple", "Mango"];
+// 1. length
+console.log(arr.length); // 4
+
+// 2. toString, join
+console.log(arr.toString()); // "Banana,Orange,Apple,Mango"
+console.log(arr.join(" - ")); // "Banana - Orange - Apple - Mango"
+
+// 3. at
+console.log(arr.at(-1)); // "Mango"
+
+// 4. push, pop
+arr.push("Kiwi");
+console.log(arr); // ["Banana","Orange","Apple","Mango","Kiwi"]
+arr.pop();
+console.log(arr); // ["Banana","Orange","Apple","Mango"]
+
+// 5. shift, unshift
+arr.shift();
+console.log(arr); // ["Orange","Apple","Mango"]
+arr.unshift("Lemon");
+console.log(arr); // ["Lemon","Orange","Apple","Mango"]
+
+// 6. concat
+let arr2 = ["Pineapple", "Grapes"];
+console.log(arr.concat(arr2)); // ["Lemon","Orange","Apple","Mango","Pineapple","Grapes"]
+
+let arr = ["Banana", "Orange", "Apple", "Mango"];
+// 7. slice, splice, toSpliced
+console.log(arr.slice(1, 3)); // ["Orange","Apple"]
+arr.splice(2, 1, "Peach");
+console.log(arr); // ["Lemon","Orange","Peach","Mango"]
+console.log(arr.toSpliced(1, 2)); // ["Lemon","Mango"]
+
+// 8. copyWithin, flat
+let nums = [1,2,3,4,5];
+nums.copyWithin(0,3);
+console.log(nums); // [4,5,3,4,5]
+let nested = [1,[2,3],[4,[5]]];
+console.log(nested.flat(2)); // [1,2,3,4,5]
+
+// 9. isArray
+console.log(Array.isArray(arr)); // true
+
+// 10. indexOf, lastIndexOf, includes
+console.log(arr.indexOf("Peach")); // 2
+console.log(arr.lastIndexOf("Mango")); // 3
+console.log(arr.includes("Orange")); // true
+
+// 11. find, findIndex, findLast, findLastIndex
+let numbers = [10, 20, 30, 40];
+console.log(numbers.find(n => n > 25)); // 30
+console.log(numbers.findIndex(n => n > 25)); // 2
+console.log(numbers.findLast(n => n > 25)); // 40
+console.log(numbers.findLastIndex(n => n > 25)); // 3
+
+let arr = ["Banana", "Orange", "Apple", "Mango"];
+// 12. sort, reverse
+console.log(arr.sort());   // ["Lemon","Mango","Orange","Peach"]
+console.log(arr.reverse()); // ["Peach","Orange","Mango","Lemon"]
+
+// 13. forEach, map, filter
+arr.forEach(fruit => console.log(fruit));
+let upper = arr.map(fruit => fruit.toUpperCase());
+console.log(upper); // ["PEACH","ORANGE","MANGO","LEMON"]
+let filtered = arr.filter(fruit => fruit.startsWith("M"));
+console.log(filtered); // ["Mango"]
+
+// 14. reduce, reduceRight
+let sum = numbers.reduce((acc, val) => acc + val, 0);
+console.log(sum); // 100
+let sumRight = numbers.reduceRight((acc, val) => acc + val, 0);
+console.log(sumRight); // 100
+
+// 15. every, some
+console.log(numbers.every(n => n > 5)); // true
+console.log(numbers.some(n => n > 35)); // true
+
+// 16. entries, keys, values
+for (let [i, v] of arr.entries()) console.log(i, v);
+for (let k of arr.keys()) console.log(k);
+for (let v of arr.values()) console.log(v);
+
+let arr = ["Banana", "Orange", "Apple", "Mango"];
+// 17. fill
+let filled = new Array(5).fill("X");
+console.log(filled); // ["X","X","X","X","X"]
+
+// 18. from, of
+console.log(Array.from("Deepak")); // ["D","e","e","p","a","k"]
+console.log(Array.of(1,2,3)); // [1,2,3]
+
+
+
+
+// Sample object
+let person = { name: "Deepak", age: 30, city: "Pune" };
+
+// 1. Object.keys, Object.values, Object.entries
+console.log(Object.keys(person));   // ["name","age","city"]
+console.log(Object.values(person)); // ["Deepak",30,"Pune"]
+console.log(Object.entries(person)); // [["name","Deepak"],["age",30],["city","Pune"]]
+
+// 2. Object.assign
+let target = { country: "India" };
+Object.assign(target, person);
+console.log(target); // {country:"India", name:"Deepak", age:30, city:"Pune"}
+
+// 3. Object.create
+let proto = { greet() { return "Hello!"; } };
+let obj = Object.create(proto);
+console.log(obj.greet()); // "Hello!"
+
+// 4. Object.defineProperty, Object.defineProperties
+Object.defineProperty(person, "id", { value: 101, writable: false });
+console.log(person.id); // 101
+Object.defineProperties(person, {
+  email: { value: "deepak@example.com", writable: true },
+  active: { value: true }
+});
+console.log(person.email, person.active);
+
+let person = { name: "Deepak", age: 30, city: "Pune" };
+// 5. Object.getOwnPropertyDescriptor, Object.getOwnPropertyDescriptors
+console.log(Object.getOwnPropertyDescriptor(person, "id"));
+console.log(Object.getOwnPropertyDescriptors(person));
+
+// 6. Object.freeze, Object.isFrozen
+Object.freeze(person);
+console.log(Object.isFrozen(person)); // true
+
+// 7. Object.seal, Object.isSealed
+let car = { brand: "Tata", model: "Nexon" };
+Object.seal(car);
+console.log(Object.isSealed(car)); // true
+
+// 8. Object.preventExtensions, Object.isExtensible
+let bike = { brand: "Hero" };
+Object.preventExtensions(bike);
+console.log(Object.isExtensible(bike)); // false
+
+// 9. Object.getPrototypeOf, Object.setPrototypeOf
+console.log(Object.getPrototypeOf(obj)); // proto
+Object.setPrototypeOf(obj, { greet() { return "Namaste!"; } });
+console.log(obj.greet()); // "Namaste!"
+
+// 10. Object.hasOwn, Object.hasOwnProperty
+console.log(Object.hasOwn(person, "name")); // true
+console.log(person.hasOwnProperty("age"));  // true
+
+
+let person = { name: "Deepak", age: 30, city: "Pune" };
+// 11. Object.is
+console.log(Object.is(NaN, NaN)); // true
+console.log(Object.is(+0, -0));   // false
+
+// 12. Object.fromEntries
+let entries = [["fruit","Mango"],["color","Yellow"]];
+console.log(Object.fromEntries(entries)); // {fruit:"Mango", color:"Yellow"}
+
+// 13. Object.groupBy (ES2024)
+let arr = [{type:"fruit",name:"apple"},{type:"fruit",name:"mango"},{type:"veg",name:"carrot"}];
+let grouped = Object.groupBy(arr, item => item.type);
+console.log(grouped);
+// { fruit: [{...},{...}], veg: [{...}] }
+
+// 14. Object.prototype methods (toString, valueOf)
+console.log(person.toString()); // "[object Object]"
+console.log(person.valueOf());  // {name:"Deepak", age:30, city:"Pune"}
+
+
+
+
+
+
+// 1. Closures
+function makeCounter() {
+  let count = 0;
+  return function() {
+    count++;
+    return count;
+  };
+}
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+
+// 2. Prototypes
+function Person(name) {
+  this.name = name;
+}
+Person.prototype.sayHello = function() {
+  return `Hello, I am ${this.name}`;
+};
+let p = new Person("Deepak");
+console.log(p.sayHello());
+
+// 3. Classes & Inheritance
+class Animal {
+  constructor(type) { this.type = type; }
+  speak() { console.log(`${this.type} makes a sound`); }
+}
+class Dog extends Animal {
+  speak() { console.log("Dog barks"); }
+}
+new Dog("Dog").speak();
+
+// 4. Destructuring & Spread
+let obj = {a:1, b:2, c:3};
+let {a, ...rest} = obj;
+console.log(a, rest); // 1 {b:2, c:3}
+
+// 5. Promises
+let promise = new Promise((resolve, reject) => {
+  setTimeout(() => resolve("Done!"), 1000);
+});
+promise.then(res => console.log(res));
+
+// 6. Async/Await
+async function fetchData() {
+  let data = await Promise.resolve("Fetched Data");
+  console.log(data);
+}
+fetchData();
+
+// 7. Generators
+function* gen() {
+  yield 1;
+  yield 2;
+  yield 3;
+}
+for (let val of gen()) console.log(val);
+
+// 8. Proxy
+let target = { message: "Hello" };
+let proxy = new Proxy(target, {
+  get(obj, prop) {
+    return prop in obj ? obj[prop] : "Not Found";
+  }
+});
+console.log(proxy.message); // Hello
+console.log(proxy.other);   // Not Found
+
+// 9. Symbols
+let sym = Symbol("id");
+let user = { [sym]: 123 };
+console.log(user[sym]);
+
+// 10. Modules (ES6)
+// In practice: export/import in separate files
+// export const PI = 3.14;
+// import { PI } from './math.js';
+
+
+
+	I) Beginner -Done
+	   1) Variable -Done       // Var let const
+	   2) Data Type -Done      // Array => object
+	   3) operators -Done      //  +   // ex 1+2+3  =6  "1"+2+3=123 
+	   4) Statement  -Done     // 
+	   5) loop   -Done         // in of 
+	   6) Ternary operators  -Done // new 
+	   7) Function    -Done
+	   8) default params  -Done  //
+	   9) Hoisting   -Done     // only with var
+	  10) TDZ  -Done            // 
+	  11) Mutability , immutability  -Done // array object
+	  12) IIFE  -Done 
+	II) Intermediate  -Done
+	   1) Scope  -Done   //
+	   2) Array methods  -Done
+	   3) higher-order function  -Done //    
+	   4) string Methods  -Done
+	   5) object Methods  -Done
+	   6) String literal   -Done  //
+	   7) closure  -Done   //
+           8) DOM  -Done
+           9) BOM -Done
+          10) Event       -Done
+          12) Set Interval  -Done //
+          13) Set Timeout  -Done  //
+      III) Advance
+          1) ES6 Feature  -Done  //
+          2) Arrow Function   -Done //
+          3) Rest   -Done   //
+          4) Spread  -Done  //
+          5) Deep   ///
+          6) Shallow Copy  ///
+          7) Structure Clone ///
+          8) Desaturating   -Done  //
+          9) Nullish   -Done     //
+         10) optional chaining   -Done //
+         11) Call, Bind, Apply   //
+     IV) Master / Expert  /// JS 1 year  /// Master  all
+         1) Promise  /// penading , faill success  ///order wise
+         2) async await ///not in order
+         3) Map Set  // arr=[1,2,3,1,45,1,46,1]
+       4) Debagging -Done
+       5) prototype  
+       6) Event Loop
+       7) Event Bubbling
+       8) Event Capturing
+       9) Event Delegation
+       10) throttling
+       11) currying
+       12) debouncing
+       13) memorization
+       14) Deep Clone , 
+       15) call back ,call back hell
+       16) this
+       17) short circular Evaluation
+       18) ES6 ES5
+       19) pure Function
+       20) Generators  Function
+       21) Symbols
+       22) Proxy
+       23) Iterators
+       24) Micro task  API , Macro task time
+       25) Type of Instance
+       26) Polypills 
+
+======================
+
+        let arr = [10, 20, 30, 40, 50];
+	arr.forEach(x => console.log("forEach:", x));
+	let doubled = arr.map(x => x * 2);
+	let sorted = [...arr].sort((a,b)=>b-a);
+	let toSorted = arr.toSorted((a,b)=>a-b);
+	console.log("every > 5:", arr.every(x => x > 5));
+	console.log("some > 45:", arr.some(x => x > 45));
+	let filtered = arr.filter(x => x > 25);
+	let sum = arr.reduce((a,b)=>a+b,0);
+
+	console.log("indexOf 30:", arr.indexOf(30));
+	console.log("lastIndexOf 30:", [10,30,20,30].lastIndexOf(30));
+	console.log("find > 25:", arr.find(x => x > 25));
+	console.log("findIndex > 25:", arr.findIndex(x => x > 25));
+	console.log("findLast > 25:", arr.findLast(x => x > 25));
+	console.log("findLastIndex > 25:", arr.findLastIndex(x => x > 25));
+
+	console.log("slice(1,3):", arr.slice(1,3));
+	let filled = [1,2,3].fill(9,1,3);
+	let flat = [[1,2],[3,4]].flat();
+	let delArr = [1,2,3]; delete delArr[1]; // leaves empty slot
+
+	let ofArr = Array.of(7,8,9);
+	let fromArr = Array.from("abc");
+	console.log("isArray:", Array.isArray(arr));
+
+
+
+
+
+
+
+Core JavaScript (Basics)
+What are the different data types in JavaScript?
+Difference between var, let, and const.
+Explain hoisting in JavaScript.
+What is the difference between == and ===?
+What is a closure? Give an example.
+Explain the concept of scope (global, function, block).
+What is the difference between null and undefined?
+What is the Temporal Dead Zone (TDZ)?
+Explain the difference between primitive and reference types.
+How does type coercion work in JavaScript?
+Write 20 program base on array and object?
+
+🔸 Functions & Objects
+What is the difference between function declaration and function expression?
+Explain arrow functions and their limitations.
+What is the difference between call, apply, and bind?
+Explain the concept of this in JavaScript.
+What is an Immediately Invoked Function Expression (IIFE)?
+What are pure functions?
+Explain prototypal inheritance.
+What is the difference between shallow copy and deep copy?
+What are getter and setter methods in objects?
+Explain the difference between Object.freeze() and Object.seal().
+
+⚡ Asynchronous JavaScript
+Difference between synchronous and asynchronous code.
+Explain the event loop in JavaScript.
+What are microtasks vs macrotasks?
+Difference between callbacks, promises, and async/await.
+What is callback hell? How to avoid it?
+Explain promise chaining with an example.
+What is the difference between Promise.all and Promise.race?
+How does setTimeout and setInterval work?
+What is debouncing and throttling?
+Explain the difference between process.nextTick() and setImmediate() (Node.js).
+
+🌐 DOM & BOM
+Difference between document.querySelector and getElementById.
+Explain event bubbling and event capturing.
+What is event delegation?
+Difference between innerHTML, innerText, and textContent.
+How to prevent default behavior in events?
+What is the difference between localStorage, sessionStorage, and cookies?
+Explain the difference between window.onload and DOMContentLoaded.
+How does addEventListener work?
+What is the difference between alert, confirm, and prompt?
+Explain the difference between history.pushState and location.href.
+
+🛠️ Advanced Concepts
+What are ES6 features in JavaScript?
+Explain destructuring with examples.
+What is the difference between Map and Set?
+Explain generator functions and the yield keyword.
+What is memoization?
+Explain currying in JavaScript.
+What is the difference between mutable and immutable data?
+What are symbols in JavaScript?
+Explain polyfills with an example.
+What is the difference between CommonJS and ES6 modules?
+
+

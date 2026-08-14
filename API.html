@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+<script>
+	var setUrl='https://jsonplaceholder.typicode.com/users';
+	fetch(setUrl).then((res)=>{
+		return res.json();
+	}).then((res)=>{
+		/// atuall 
+		console.log(res)
+		res.forEach((a)=>{
+			var tag=document.createElement('div');
+	         tag.innerText='Name: '+a.name;
+	         document.body.appendChild(tag)
+
+	        var tag2=document.createElement('div');
+	         tag2.innerHTML='Phone: '+a.phone+"<hr>"; 
+	         document.body.appendChild(tag2)
+		})
+	}).catch((error)=>{
+      console.log(error)
+	})
+</script>
+
+<!-- 
+
+Core JavaScript (Basics)
+What are the different data types in JavaScript?
+Difference between var, let, and const.
+Explain hoisting in JavaScript.
+What is the difference between == and ===?
+What is a closure? Give an example.
+Explain the concept of scope (global, function, block).
+What is the difference between null and undefined?
+What is the Temporal Dead Zone (TDZ)?
+Explain the difference between primitive and reference types.
+How does type coercion work in JavaScript?
+Write 20 program base on array and object?
+
+🔸 Functions & Objects
+What is the difference between function declaration and function expression?
+Explain arrow functions and their limitations.
+What is the difference between call, apply, and bind?
+Explain the concept of this in JavaScript.
+What is an Immediately Invoked Function Expression (IIFE)?
+What are pure functions?
+Explain prototypal inheritance.
+What is the difference between shallow copy and deep copy?
+What are getter and setter methods in objects?
+Explain the difference between Object.freeze() and Object.seal().
+
+⚡ Asynchronous JavaScript
+Difference between synchronous and asynchronous code.
+Explain the event loop in JavaScript.
+What are microtasks vs macrotasks?
+Difference between callbacks, promises, and async/await.
+What is callback hell? How to avoid it?
+Explain promise chaining with an example.
+What is the difference between Promise.all and Promise.race?
+How does setTimeout and setInterval work?
+What is debouncing and throttling?
+Explain the difference between process.nextTick() and setImmediate() (Node.js).
+
+🌐 DOM & BOM
+Difference between document.querySelector and getElementById.
+Explain event bubbling and event capturing.
+What is event delegation?
+Difference between innerHTML, innerText, and textContent.
+How to prevent default behavior in events?
+What is the difference between localStorage, sessionStorage, and cookies?
+Explain the difference between window.onload and DOMContentLoaded.
+How does addEventListener work?
+What is the difference between alert, confirm, and prompt?
+Explain the difference between history.pushState and location.href.
+
+🛠️ Advanced Concepts
+What are ES6 features in JavaScript?
+Explain destructuring with examples.
+What is the difference between Map and Set?
+Explain generator functions and the yield keyword.
+What is memoization?
+Explain currying in JavaScript.
+What is the difference between mutable and immutable data?
+What are symbols in JavaScript?
+Explain polyfills with an example.
+What is the difference between CommonJS and ES6 modules?
+
+ -->
+
+</body>
+</html>
